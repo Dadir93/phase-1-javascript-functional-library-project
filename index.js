@@ -104,42 +104,41 @@ function myEach(collection, callback) {
   const sampleArray = [1, 2, 3, 4, 5];
   const sampleObject = { one: 1, two: 2, three: 3 };
   
-  console.log(myEach(sampleArray, (num) => console.log(num))); // alerts each number in turn and returns the original collection
-  console.log(myEach(sampleObject, (num) => console.log(num))); // alerts each number value in turn and returns the original collection
+  console.log(myEach(sampleArray, (num) => console.log(num))); 
+  console.log(myEach(sampleObject, (num) => console.log(num))); 
+  console.log(myMap(sampleArray, (num) => num * 3)); 
+  console.log(myMap(sampleObject, (num) => num * 3));
   
-  console.log(myMap(sampleArray, (num) => num * 3)); // [3, 6, 9]
-  console.log(myMap(sampleObject, (num) => num * 3)); // [3, 6, 9]
+  console.log(myReduce(sampleArray, (acc, val) => acc + val, 10));
+  console.log(myReduce(sampleObject, (acc, val) => acc + val));
   
-  console.log(myReduce(sampleArray, (acc, val) => acc + val, 10)); // 25
-  console.log(myReduce(sampleObject, (acc, val) => acc + val)); // 6
+  console.log(myFind(sampleArray, (num) => num % 2 === 0));
+  console.log(myFind(sampleObject, (num) => num % 2 === 0));
   
-  console.log(myFind(sampleArray, (num) => num % 2 === 0)); // 2
-  console.log(myFind(sampleObject, (num) => num % 2 === 0)); // 2
+  console.log(myFilter(sampleArray, (num) => num % 2 === 0));
+  console.log(myFilter(sampleObject, (num) => num % 2 === 0));  
+  console.log(mySize(sampleArray)); 
+  console.log(mySize(sampleObject));
   
-  console.log(myFilter(sampleArray, (num) => num % 2 === 0)); // [2, 4]
-  console.log(myFilter(sampleObject, (num) => num % 2 === 0)); // []
+  console.log(myFirst(sampleArray, 3)); 
+  console.log(myFirst(sampleObject)); 
   
-  console.log(mySize(sampleArray)); // 5
-  console.log(mySize(sampleObject)); // 3
+  console.log(myLast(sampleArray, 3));
+  console.log(myLast(sampleObject));
   
-  console.log(myFirst(sampleArray, 3)); // [1, 2, 3]
-  console.log(myFirst(sampleObject)); // 1
-  
-  console.log(myLast(sampleArray, 3)); // [3, 4, 5]
-  console.log(myLast(sampleObject)); // 3
-  
-  console.log(mySortBy([1, 2, 3, 4, 5, 6], (num) => Math.sin(num))); // [5, 4, 6, 3, 1, 2]
+  console.log(mySortBy([1, 2, 3, 4, 5, 6], (num) => Math.sin(num))); 
   
   const stooges = [
     { name: 'moe', age: 40 },
     { name: 'larry', age: 50 },
     { name: 'curly', age: 60 },
   ];
-  console.log(mySortBy(stooges, (stooge) => stooge.name)); // [{ name: 'curly', age: 60 }, { name: 'larry', age: 50 }, { name: 'moe', age: 40 }]
+  console.log(mySortBy(stooges, (stooge) => stooge.name)); 
+  [{ name: 'curly', age: 60 }, { name: 'larry', age: 50 }, { name: 'moe', age: 40 }]
   
-  console.log(myFlatten([1, [2], [3, [[4]]]])); // [1, 2, 3, 4]
-  console.log(myFlatten([1, [2], [3, [[4]]]], true)); // [1, 2, 3, [[4]]]
+  console.log(myFlatten([1, [2], [3, [[4]]]])); 
+  console.log(myFlatten([1, [2], [3, [[4]]]], true)); 
   
-  console.log(myKeys({ one: 1, two: 2, three: 3 })); // ["one", "two", "three"]
-  console.log(myValues({ one: 1, two: 2, three: 3 })); // [1, 2, 3]
+  console.log(myKeys({ one: 1, two: 2, three: 3 })); 
+  console.log(myValues({ one: 1, two: 2, three: 3 })); 
   

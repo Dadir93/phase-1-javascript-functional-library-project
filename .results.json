@@ -5,9 +5,9 @@
     "passes": 24,
     "pending": 0,
     "failures": 3,
-    "start": "2024-01-16T16:26:30.592Z",
-    "end": "2024-01-16T16:26:30.985Z",
-    "duration": 393
+    "start": "2024-01-16T16:34:24.409Z",
+    "end": "2024-01-16T16:34:24.756Z",
+    "duration": 347
   },
   "tests": [
     {
@@ -102,7 +102,7 @@
     {
       "title": "does not modify the original object",
       "fullTitle": "index.js myReduce does not modify the original object",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
@@ -327,7 +327,7 @@
     {
       "title": "does not modify the original object",
       "fullTitle": "index.js myReduce does not modify the original object",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
